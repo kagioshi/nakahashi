@@ -1,0 +1,11 @@
+FROM typesense/typesense:latest
+
+# Expose default Typesense port
+EXPOSE 8108
+
+# Set required Typesense environment variables
+ENV TYPESENSE_API_KEY=xyz
+ENV TYPESENSE_DATA_DIR=/data
+ENV TYPESENSE_SERVER_PORT=8108
+
+VOLUME /data
