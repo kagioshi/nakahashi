@@ -1,11 +1,8 @@
 FROM typesense/typesense:latest
 
-# Expose default Typesense port
+# Expose the port Choreo will listen to
 EXPOSE 8108
 
-# Set required Typesense environment variables
-ENV TYPESENSE_API_KEY=xyz
-ENV TYPESENSE_DATA_DIR=/data
-ENV TYPESENSE_SERVER_PORT=8108
+# You do NOT set ENV here in Dockerfile for sensitive values
+# Choreo lets you define environment variables at deploy time
 
-VOLUME /data
